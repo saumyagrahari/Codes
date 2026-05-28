@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, q = 0, sign = 1;
+    printf("Enter dividend and divisor: ");
+    scanf("%d %d", &a, &b);
+    if (b == 0) {
+        printf("Error: Division by zero\n");
+        return 1;
+    }
+    if (a < 0) { a = -a; sign *= -1; }
+    if (b < 0) { b = -b; sign *= -1; }
+    while (a >= b) {
+        a -= b;
+        q++;
+    }
+    printf("Quotient: %d\nRemainder: %d\n", q * sign, a);
+    return 0;
+}

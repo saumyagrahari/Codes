@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h> // For abs()
+
+int main() {
+    int number;
+    
+    // Prompt user for a 4-digit number
+    printf("Enter a 4-digit number: ");
+    scanf("%d", &number);
+
+    // Check if the number is 4 digits
+    if (number < 1000 || number > 9999) {
+        printf("Invalid input. Please enter a 4-digit number.\n");
+        return 1;
+    }
+
+    // Extract digits
+    int first_digit = number / 1000;            // Thousands place
+    int second_digit = (number / 100) % 10;     // Hundreds place
+    int third_digit = (number / 10) % 10;       // Tens place
+    int fourth_digit = number % 10;             // Units place
+
+    // Calculate sums
+    int sum_first_two = first_digit + second_digit;
+    int sum_last_two = third_digit + fourth_digit;
+
+    // Calculate absolute difference
+    int difference = abs(sum_first_two - sum_last_two);
+
+    // Display the result
+    printf("Sum of first two digits: %d\n", sum_first_two);
+    printf("Sum of last two digits: %d\n", sum_last_two);
+    printf("Difference: %d\n", difference);
+
+    return 0;
+}
+ 
