@@ -9,6 +9,8 @@ int main(){
     greatest=a>b?a:b;
     greatest=greatest>c?greatest:c;
     greatest=greatest>d?greatest:d;
+
+    
     printf("greatest number is:%d\n",greatest);
     return 0;
 }
