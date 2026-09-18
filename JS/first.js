@@ -88,3 +88,45 @@ for(let val of items){
     console.log(`value after offer ${items[idx]}`);
     idx++;
 }
+let store=["bloomberg", "microsoft","uber","google","ibm","netflix"];
+console.log(store);
+store.shift();
+console.log(store);
+store.splice(1,1,"ola");
+console.log(store);
+store.push("amazon");
+console.log(store);
+
+function myFun(){
+    console.log("You Are Good.");
+}
+myFun();
+function sum1(a,b){
+    c=a+b;
+    return c;
+}
+let val=sum1(2,3);
+console.log(`Value of this sum is ${val}.`);
+const myFunc=(a,b)=>{
+    d=a-b;
+    return d;
+}
+let val2=myFunc(9,3);
+console.log(val2);
+
+function countVowel(str){
+    let count=0;
+    for(const char of str){
+        if(
+            char=="a" || char=="e" ||char=="i" ||char=="o"|| char=="u"
+        ){
+            count++;
+        }
+        console.log(count);
+    }
+}
+let arr=[1,2,3,4,5];
+arr.forEach(function printVal(val){
+    console.log(val);
+}
+);
