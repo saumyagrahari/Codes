@@ -125,8 +125,13 @@ function countVowel(str){
         console.log(count);
     }
 }
-let arr=[1,2,3,4,5];
-arr.forEach(function printVal(val){
-    console.log(val);
-}
-);
+console.log("New Pattern:")
+let sam=[1,2,3,4,5];
+sam.forEach((arr)=>{
+    console.log(arr*arr);
+});
+
+let evenArr=sam.filter((val)=>{
+    return val%2===0;
+})
+console.log(evenArr);
