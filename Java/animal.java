@@ -4,9 +4,9 @@
 // Base class
 import java.util.*;
 // Base class
-class Animal {
+class Animal{
     public void makeSound() {
-        System.out.println("Some generic animal sound");
+        System.out.println("Some animal sound");
     }
 }
 // Subclass Dog
